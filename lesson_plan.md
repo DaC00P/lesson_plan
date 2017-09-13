@@ -1,6 +1,13 @@
-* **Instructor Note**: This lesson is meant to be taught immediately after students have been exposed to basic function writing and bubble sort on the first whiteboarding day. It is valuable to stop and take questions often from students - many will feel confused and/or overwhelmed after the first whiteboarding day. This lesson seeks to enforce why we write algorithms in the way that we do, and why it is important from a computer science standpoint.
-
 # An Introduction to Big O & Algorithms
+
+### **Instructor Note**
+This lesson is meant to be taught immediately after students have been exposed to basic function writing and bubble sort on the first whiteboarding day. It is valuable to stop and take questions often from students - many will feel confused and/or overwhelmed after the first whiteboarding day. Especially so if they do not have a background in math of computer science.
+
+### **Class Goals**
+* This lesson seeks to quickly go over what Big O is, introduce students to the notion of time complexity, and show them how to calculate it in Big O notation.
+* Go over linear, constant, and O(n<sup>2</sup>) time complexity.
+* Have students understand enough in order to begin recalling what time complexities they are introducing into their own code.
+* NOTE: This is a lecture & discussion heavy class. No question is too simple or stupid today - emphasize this to students at the start of class.
 
 ## Instructor Talk: What is Big O?
 * Big O, also known as time & space complexity, is a way computer scientists measure how memory efficient or fast an algorithm is as the given input grows larger & larger.
@@ -104,8 +111,8 @@ function bubbleSort(array) {
 ```
 
 _**Instructor: Potential Live Demo.**_
-* One effective tactic of visualizing Bubble Sort is to bring 4-5 students of varying heights up to the front of class. Organize them tallest to shortest. Then, making sure to call out each time we 'access' and swap them if need be.
-* Show students how we have had to look at each person n(length of student 'array') times, even if there is no swap needed.
+* One effective tactic of visualizing Bubble Sort is to bring 4-5 students of varying heights up to the front of class. Organize them tallest to shortest. Then, making sure to call out each time we 'access' and swap them if need be. Have a student keep count of how many operations we have to do for each student.
+* Reinforce that we have had to look at each person n(length of student 'array') times, even if there is no swap needed.
 * If you're iffy about doing this, here is a digital demonstration: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
 
 * This means we are performing many operations on each element by using nested `for` loops.
@@ -114,4 +121,11 @@ _**Instructor: Potential Live Demo.**_
 * Also mention to students that generally, nested `for` loops lead to O(n<sup>2</sup>) time complexity.
 _**Instructor: Field questions at this point.**_
 
-** If students want more on Bubble Sort, slack them this link at the end of class. http://codingmiles.com/sorting-algorithms-bubble-sort-using-javascript/. It goes through Bubble Sort step by step & covers it's Time Complexity in detail. For  now, more on to analyzing it.
+## Instructor DO: Wrap Up & Motivate Students!
+* This lesson can be particularly challenging for students without a strong math or CS background.
+  * Emphasize that not all interviews involve whiteboarding and Big O analysis.
+  * Also emphasize that understanding of these concepts will come with time. They are complex and folks spend entire 4 year degrees mastering them, only to get a PhD to truly master them.
+  * Remind students that they can **always** practice Big O analysis on their own code!
+* Encourage students to look at
+
+** If students want more on Bubble Sort & its time complexity, slack them this link at the end of class. http://codingmiles.com/sorting-algorithms-bubble-sort-using-javascript/. It goes through Bubble Sort step by step & covers it's Time Complexity in detail. For  now, more on to analyzing it.
