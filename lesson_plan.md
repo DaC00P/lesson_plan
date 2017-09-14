@@ -51,7 +51,7 @@ function searchThroughArray(arrayOfIntegers, targetInteger){
   * It is absolutely an algorithm - you can think about it like an analog to `Array.prototype.includes`.
   * Its worst case scenario is that it has to go through all the items in the array, checking each one against the `targetItem`.
   * The best case solution is that it finds the `targetItem` at the start of the array (position 0), and returns true.
-* **Instructor Note:** Now comes the tricky part. We will go straight into Big O notation. Be ready to field questions and explain how the    notation is just a CS way of describing the runtime relative to the input, which is usually denoted as `n`.
+* **Instructor Note:** Now comes the tricky part. We will go straight into Big O notation. Be ready to field questions and explain how the    notation is just a CS way of describing the runtime relative to the input, which is usually denoted as `n`, or some multiplication/power of `n`.
 * Now that we have a grasp on what our algo does, and what the worst case scenario is, we're ready to learn how to express that in Big O.
 * **The time complexity of this algo can be expressed as O(n).**
 * Explain to students that all time complexity is expressed as the function O (Hence, big O), and the argument(s) to that function is the number of operations relative to the input size (denoted as `n`).
@@ -75,7 +75,7 @@ _**Instructor: Field questions at this point. Then go over the Reference Chart a
   * That means that as the input grows very large, the algo will take, at worst, as long as it takes to visit every element and do an equality check using `===`
   * Explain to the students that this equality check(when using ===) takes a constant amount of time in javascript for integers and strings.
     * _Instructor Note 1_ Technically the time complexity is `O(n) + 1`, since we do a constant time operation each time we check equality. If the class is struggling, skip or gloss over this point and field more questions.
-    * _Instructor Note 2_ If you cover this point, you will have to cover how time complexity reduces down to the most significant operation. Explain that as the input grows amazingly huge, adding one single operation to it won't make any difference. Prepare to field more questions here - students are oft confused here.
+    * _Instructor Note 2_ If you cover this point, you will have to cover how time complexity reduces down to the most significant operation. Explain that as the input grows amazingly huge, adding one single operation to it won't make any difference. The runtime must be expressed relative to the input, and as the input scales to infinity, the constant becomes insignificant. Prepare to field more questions here - students are oft confused here.
 
 _**Instructor: Field questions at this point**_
 
@@ -98,18 +98,19 @@ function returnLastElement(array){
 * If no one landed on the fact that this takes constant time, state that, then move to explanation
 * EXPLANATION:
   * Here we do four operations. We calculate the length of the array, subtract one from it, then access the array, and finally return that element we just accessed.
-  * The length calculation students may think means we have to iterate the length of the array - we don't! Javascript is awesome in that it stores the length as a property of the array and updates it as needed. This is due to the fact that arrays are technically objects under the hood, but that's a discussion for office hours!
+  * The length calculation: Students may think means we have to iterate the length of the array - we don't! Javascript is awesome in that it stores the length as a property of the array and updates it as needed. This is due to the fact that arrays are technically objects under the hood, but that's a discussion for office hours!
   * Subtracting one from that integer is another operation. This is generally constant time.
   * Accessing the array at the given index is **also** constant time - this is an inherent power of how arrays are built under the hood.
   * A return statement is constant time - we're passing a reference to the array element in memory.
   * So, we have a constant time overall! This algo will almost never take longer, no matter if the array is a million items, or five items.
-  * _Instructor Note 1_ Technically the time complexity is `1 + 1 + 1 + 1`, or `O(4)`. If a student points this out, let them know that like the above example, Big O notation is almost always reduced down to its generic expression. Constant time algorithms are denoted by O(1), since O(4) will **also** take a constant amount of time.
-  * _Instructor Note 1_ If students are confused about this fact, remind them that this constant time is always **relative**. Therefore, it doesn't matter if we do one or 100 constant time operations, the runtime will be the same for inputs of any size. AKA Constant Time!!
+  * _Instructor Note 1:_ Technically the time complexity is `1 + 1 + 1 + 1`, or `O(4)`. If a student points this out, let them know that like the above example, Big O notation is almost always reduced down to its generic expression. Constant time algorithms are denoted by O(1), since O(4) will **also** take a constant amount of time.
+  * _Instructor Note 2:_ If students are confused about this fact, remind them that this constant time is always **relative**. Therefore, it doesn't matter if we do one or 100 constant time operations, the runtime will be the same for inputs of any size. Its
+all relative!
 
 _**Instructor: Field questions at this point**_
 
-### Class Do - Go Over Bubble Sort & Its Time Complexity
-* At this point, we should all be somewhat familiar with Bubble Sort, covered in the last class.
+### Instructor Do - Go Over Bubble Sort & Its Time Complexity
+* At this point, we should all be familiar with Bubble Sort, covered in the last class.
 * **Instructor Note**: poll the class. If students seem frustrated/lost or don't remember the concept of bubble sort well, slack out the below code and go through the comments with the class.
 
 ```javascript
@@ -145,10 +146,11 @@ do {
 ```
 
 _**Instructor: Potential Live Demo if Students are still fuzzy on Bubble Sort**_
-* One effective tactic of visualizing Bubble Sort is to bring 4-5 students of varying heights up to the front of class. Organize them tallest to shortest. 'Sort' them shortest to tallen, making sure to call out each time we 'access' and swap them if need be. Have a student keep count of how many operations we have to do for each student.
-* Reinforce that we have had to look at each person n(length of student 'array') times, even if there is no swap needed.
-* If you're iffy about doing this, here is a digital demonstration: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
+  * One effective tactic of visualizing Bubble Sort is to bring 4-5 students of varying heights up to the front of class. Organize them tallest to shortest. 'Sort' them shortest to tallen, making sure to call out each time we 'access' and swap them if need be. Have a student keep count of how many operations we have to do for each student.
+  * Reinforce that we have had to look at each person n(length of student 'array') times, even if there is no swap needed.
+  * If you're iffy about doing this, here is a digital demonstration: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
 
+##### Instructor Explain - Bubble Sort's Time Complexity
 * Go over the worst case scenario - the array is in reverse order, and each element must bubble up by being checked against each other element.
 * Query students about how many operations the function performs on each element.
 * Explain that we are performing n operations on each element in the worst case, where n in the length of the input array.
@@ -159,10 +161,12 @@ _**Instructor: Field questions at this point.**_
 
 ## Instructor DO: Wrap Up & Motivate Students!
 * This lesson can be particularly challenging for students without a strong math or CS background.
-  * Emphasize that not all interviews involve whiteboarding and Big O analysis.
+  * Emphasize that while it is common, not all interviews involve whiteboarding and Big O analysis.
   * Also emphasize that understanding of these concepts will come with time. They are complex and folks spend entire 4 year degrees mastering them, only to get a PhD to truly master them.
   * Remind students that they can **always** practice Big O analysis on their own code! Encourage them to bring questions to office hours.
 * Encourage students to look at online resources.
 * End with the caveat that while optimizing and writing your functions in the most efficient way is great, there is a tenet in software engineering that sums up to: `Don't optimize if you don't need to`. As in, students should **not** be driving themselves nuts to not use nested loops in a homework - working code matters more than highly optimized buggy code at this point in their careers!
 
-** If students want more on Bubble Sort & its time complexity, slack them this link at the end of class. http://codingmiles.com/sorting-algorithms-bubble-sort-using-javascript/. It goes through Bubble Sort step by step & covers it's Time Complexity in detail. For  now, more on to analyzing it.
+#### Extra Resources
+* If students want more on Bubble Sort & its time complexity, slack them this link at the end of class. http://codingmiles.com/sorting-algorithms-bubble-sort-using-javascript/. It goes through Bubble Sort step by step & covers it's Time Complexity in detail. For  now, more on to analyzing it.
+* If you have any students who are advanced, and have had prior exposure to Big O in math/CS, slack them this link:http://bigocheatsheet.com/. It goes over all the time complexities for common functions and algorithms.
