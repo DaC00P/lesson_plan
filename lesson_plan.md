@@ -24,7 +24,7 @@ This lesson is meant to be taught immediately after students have been exposed t
 * In calculating how efficient algorithms are time wise, we need to evaluate how many operations the algo must utilize to return a result. There is a best-case, worst-case, and average case scenario. Today, we will not focus much on these separate cases, instead looking at the 'approximate' worst-case scenario.
 * In a simple sense, Big O describes, in a CS way, how code will respond to different inputs. Will it be much slower if we give it a 10,000 item long input, or even a million item long input?
 
-* _Instructor Note_
+* _Instructor Note_ ??? FIXME WHY IS THIS HERE
 
 ### Students Do: Time Complexity
 * Instructor: Slack out the following code to the students. Ask them to discuss with a partner(for 5min): 1) Is this an algorithm? Why? 2) In the worst case, how many iterations will the for loop run? 3) What is the best case for iterations?
@@ -52,7 +52,6 @@ function searchThroughArray(arrayOfIntegers, targetInteger){
 * **The time complexity of this algo can be expressed as O(n).**
 * Explain to students that all time complexity is expressed as the function O (Hence, big O).
 * The (n) part describes how many times we will have to "visit", or look at, each element of the input. In the worst case, we must look at every single item in the array. Once.
-* Essentially, we will do
 
 _**Instructor: Field questions at this point**_
 
@@ -69,7 +68,7 @@ _**Instructor: Field questions at this point**_
 _**Instructor: Field questions at this point**_
 
 ### Students Do: Time Complexity Part 2
-* Instructor: Slack out the following code to the students. Ask them to discuss with a partner(for 5min): 1) Is this a constant time algorithm? 2) If so, why?
+* Instructor: Slack out the following code to the students. Ask them to discuss with a partner(for 5min): 1) What is the time complexity of this algorithm? 2) If so, why?
 
 ```javascript
 function returnLastElement(array){
@@ -108,6 +107,37 @@ function bubbleSort(array) {
     }        
   }
 }
+//TRILOGY BUBBLESORT
+// declare a variable that will act as a flag to let us know once the array has
+// finished sorting
+var sorted;
+
+function bubbleSort(arr) {
+  // everytime we iterate over the array, we know at least the last value has
+  // been sorted, so we don't have to iterate to that index again
+  var end = arr.length - 1;
+  // set flag to true, if we have to swap any values, the flag will be then set
+  // to false
+  sorted = true;
+  for (var i = 0; i < end; i++) {
+    // if the value of the current index is less than the next index, we know
+    // the list is not properly sorted and swap their positions.
+    if (arr[i] > arr[i + 1]) {
+      // we have to create a temporary variable to hold a value, so we can swap
+      // the values of the two positions
+      var temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+      sorted = false;
+    }
+  }
+  end--;
+}
+
+do {
+  bubbleSort(unsortedArr);
+} while (!sorted);
+
 ```
 
 _**Instructor: Potential Live Demo.**_
