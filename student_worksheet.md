@@ -68,7 +68,7 @@ function returnLastElement(array){
 Answer the following questions, referencing the below `bubbleSort()` function.
 1) What is the worst case scenario for bubbleSort?
 2) What is the best case?
-3) Discuss what you think the time complexity of bubbleSort is with a partner.\
+3) Discuss what you think the time complexity of bubbleSort is with a partner.
 
 ```javascript
 // declare a variable that will act as a flag to let us know once the array has
