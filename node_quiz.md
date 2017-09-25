@@ -54,10 +54,10 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
           C. To help enable the NPM/package ecosystem  
           D. All of the Above - key  
 
-9. Examine the following code block. What will be logged to the console?  
+9. Examine the following code block. What will be logged to the console?    
           ```javascript
-          var myVar = {1: 'hello', 2: 'world', 3: 'jasmine tea'};
-          console.log(myVar[1] + myVar[0]);
+            var myVar = {1: 'hello', 2: 'world', 3: 'jasmine tea'};
+            console.log(myVar[2] + myVar[1]);
           ```  
           A. 'helloworld'  
           B. 'worldhello' - key  
@@ -219,8 +219,8 @@ console.log(reverseSort(myArrayTwo)) // should be [42, 36, 17, 17, 12, 2, 1, 0]
 3. Please write a function that checks if the last character in a string is a space. It should return true if it is, false otherwise. The console.logs should print `true` when this function is operating properly.
 ```javascript
 var stringOne = 'abc  ';
-var stringTwo = `a fish in the sea`
-var stringThree = `this is a space `
+var stringTwo = 'a fish in the sea'
+var stringThree = 'this is a space '
 function isSpace(string){
 
 }
