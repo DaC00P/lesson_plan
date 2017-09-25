@@ -2,10 +2,10 @@
 Welcome to your Node.js weekly assessment! Please select the best answer for each question. There is only **one** correct answer for each question. Below the numbered questions are five fill-in-the-code style questions. Please answer those to the best of your ability in Node (back-end) JavaScript. Please do not use **any** 3rd party JavaScript packages. If any built-in method is disallowed for a specific problem, the question will state so. `i.e. Please do not use `.sort` on this question.`
 
 1. What is the Node runtime built on?
-          A. NPM
-          B. Chrome's V8 Engine - key
-          C. The Node Virtual Machine
-          D. A Virtual Browser
+          A. NPM  
+          B. Chrome's V8 Engine - key  
+          C. The Node Virtual Machine  
+          D. A Virtual Browser  
 
 2. If one runs the file `myScript.js` as follows: `node myScript.js myArgument`, how does one access the myArgument argument inside of the JavaScript file's code?
           A. process[1]
@@ -228,7 +228,7 @@ console.log(isSpace(stringTwo) === false);
 console.log(isSpace(stringThree) === true);
 ```
 
-4. You are given the following JSON: `var myJson =  {1: 2, 3: 4, 5: 6, 7: 8}`. Please complete the below function to accept this JSON and returns the sum of all the values. The console.logs should print `true` when this function is operating properly.
+4. You are given the following JSON: `var myJson =  {1: 2, 3: 4, 5: 6, 7: 8}`. Please complete the below function to accept this JSON and returns the sum of all the values. The console.logs should print `true` when this function is operating properly. Please do not use the Array method `reduce`.
 ```
 var myJson =  {1: 2, 3: 4, 5: 6, 7: 8};
 var myJsonTwo = {1: 1, false: 0, true: 5, 'seventeen': 17}
@@ -240,7 +240,7 @@ console.log(addEverything(myJson) === 36);
 console.log(addEverything(myJsonTwo) === 23);
 ```
 
-5. This function is supposed to check if a number is prime or not. Remember, prime numbers are numbers that are divisible by 1 and itself, only. It has a bug. Please fix this bug so that the following test cases console.logs `true`
+5. This function is supposed to check if a number is prime or not. Remember, prime numbers are numbers that are divisible by 1 and itself, only. It has a bug. Please fix this bug so that the following test cases console.logs `true`. Please do not change the code to use the `Math` module.
 ```
 function isPrime(number){
   for(var i = 0; i < number; i++) //should be i=2
