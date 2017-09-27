@@ -97,7 +97,7 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. [ 'My', 'Friend', 'Phil' ] - key  
     D. undefined  
 
-14. What is the most accurate definition of a server?
+14. What is the most accurate definition of a server?  
     A. A computer in a data center that holds the code responsible for Google or other large services.  
     B. A piece of software that sends email or SMS.  
     C. Hardware or software that takes requests, and gives something back or starts a process. - key  
