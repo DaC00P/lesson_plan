@@ -36,7 +36,7 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. If `a` has the same object ID as `b`  
     D. The object IDs of both objects and if they are equal  
 
-6. What will `parseInt('  5  ')` return?
+6. What will `parseInt('  5  ')` return?  
     A. The string of '  5  '  
     B. undefined  
     C. NaN  
@@ -115,7 +115,7 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. 1, 1, 1  
     D. 1, 2, 3 - key  
 
-16. What is the best description of what a switch statement used for in JavaScript?
+16. What is the best description of what a switch statement used for in JavaScript?  
     A. Returning a boolean  
     B. Conditionally rendering different components  
     C. Executing code blocks based on a condition - key  
