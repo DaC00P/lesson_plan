@@ -19,7 +19,7 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
           C. Asynchronous execution of server-side code - key  
           D. Callback based server-side code execution  
 
-4. What is the global(top level) object in Node?
+4. What is the global(top level) object in Node?  
           A. Document  
           B. Window  
           C. Object - key  
