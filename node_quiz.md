@@ -1,11 +1,11 @@
 ### Node.js Quiz
 Welcome to your Node.js weekly assessment! Please select the best answer for each question. There is only **one** correct answer for each question. Below the numbered questions are five fill-in-the-code style questions. Please answer those to the best of your ability in Node (back-end) JavaScript. Please do not use **any** 3rd party JavaScript packages. If any built-in method is disallowed for a specific problem, the question will state so. `i.e. Please do not use `.sort` on this question.`
 
-1. What is the Node runtime built on?  
-    A. NPM  
-    B. Chrome's V8 Engine - key  
-    C. The Node Virtual Machine  
-    D. A Virtual Browser  
+1. What is an example of a Web Client?
+    A. A Browser - key
+    B. A Server  
+    C. Node.js  
+    D. The D.O.M.  
 
 2. If one runs the file `myScript.js` as follows: `node myScript.js myArgument`, how does one access the myArgument argument inside of the JavaScript file's code?  
     A. process[1]  
@@ -13,28 +13,28 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. arguments[0]  
     D. process.argv[0]  
 
-3. What is one of the most key features of Node.js?  
+3. What is Node.js most notably used for?  
     A. Synchronous execution of server-side code  
-    B. Multi-threaded server-side code execution through clusters  
-    C. Asynchronous execution of server-side code - key  
-    D. Callback based server-side code execution  
+    B. Multi-threaded clusters  
+    C. The basis for webservers - key  
+    D. Asset compilation, scripting, and monitoring  
 
-4. What is the global(top level) object in Node?  
-    A. Document  
-    B. Window  
-    C. Object - key  
+4. Which of the following is not an accessible object in Node.js?  
+    A. Document   - key  
+    B. Console  
+    C. Object  
     D. Process  
 
-5. What is the most accurate description of what this block of code is logging to the console?        
+5. What is the most accurate description of what this block of code is checking?        
     ```js
     var a = 5;
     var b = 5;
     console.log(a === b)
     ```
-    A. Whether `a` and `b` are the same value by returning true or false  
-    B. Whether or not the type and value of `a` and `b` are the same by returning a boolean - key  
+    A. If `a` and `b` are the same value
+    B. Whether the type and value of `a` and `b` are equal - key  
     C. If `a` has the same object ID as `b`  
-    D. The object IDs of both objects and if they are equal  
+    D. Whether the object IDs of both objects are the same
 
 6. What will `parseInt('  5  ')` return?  
     A. The string of '  5  '  
@@ -42,13 +42,13 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. NaN  
     D. The integer 5 - key  
 
-7. What is the best description of the function of this code? `module.exports = myVar`  
+7. What is the best description of the function accomplishes in Node? `module.exports = myVar`  
     A. To import the myVar variable into this JavaScript file.  
-    B. To load the myVar file into another JavaScript in Node.js  
-    C. To export the variable myVar  
+    B. To load the myVar file into another file  
+    C. To export the variable myVar to the file server.js.  
     D. To make the variable myVar available for `require` in other JavaScript files. - key  
 
-8. What is the purpose of creating modules of different JavaScript code?  
+##8. What is the purpose of creating modules of different JavaScript code?  
     A. To encapsulate our code into different files for best practices  
     B. To be able to access JavaScript in one file from another file  
     C. To help enable the NPM/package ecosystem  
@@ -98,10 +98,10 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     D. undefined  
 
 14. What is the most accurate definition of a server?  
-    A. A computer in a data center that holds the code responsible for Google or other large services.  
+    A. A computer in a data center.  
     B. A piece of software that sends email or SMS.  
-    C. Hardware or software that takes requests, and gives something back or starts a process. - key  
-    D. The back-end software that responds to chat requests.  
+    C. Hardware or software that takes requests and/or does things. - key  
+    D. A code-based database manager
 
 15. What will be logged to the console when the following block of code is executed?       
     ```js
@@ -115,7 +115,7 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. 1, 1, 1  
     D. 1, 2, 3 - key  
 
-16. What is the best description of what a switch statement used for in JavaScript?  
+16. What is the best description of what an if/else statement used for in JavaScript?  
     A. Returning a boolean  
     B. Conditionally rendering different components  
     C. Executing code blocks based on a condition - key  
@@ -127,17 +127,17 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. A HTTP GET request  
     D. Any HTTP request - key  
 
-18. What is the proper way to check if a value is `NaN` in Node?  
-    A. `variableToCheck == NaN`  
-    B. `variableToCheck === NaN`  
-    C. `isNaN(variableToCheck)` - key  
-    D. `variableToCheck.isNaN()`  
+18. What kind of cycle do most servers utilize to communicate with web clients?  
+    A. Receive & Respond  
+    B. HTTP & HTTPS  
+    C. Request & Response - key  
+    D. Synchronous & Asynchronous  
 
-19. What is a `package.json` file created by, and what is it used for?  
-    A. The user or `npm init`, used for managing dependencies. - key  
-    B. Github or `git init`, used for packaging our code.  
-    C. Gitlab or the user, used for creating a new lab repository.  
-    D. Node.js, used for managing the runtime.  
+19. What is a `package.json` file used for?  
+    A. Managing dependencies. - key  
+    B. Packaging our code.  
+    C. Creating a new git repository.  
+    D. Managing the runtime.  
 
 20. What does this command do when run in the console? `npm install request --save`  
     A. Saves a package called `request` in our `package.json`  
@@ -151,11 +151,11 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. All of the dependencies of your code.  
     D. The code you get when you run `git pull origin master`.  
 
-22. What are API calls most well known for being in JavaScript, specifically?  
-    A. Synchronous  
-    B. Slow  
-    C. Asynchronous - key  
-    D. Fast  
+22. What kind of object is returned by most APIs, and in particular the OMDB API?
+    A. String  
+    B. JSON - key    
+    C. Array
+    D. Response  
 
 23. What is a popular 'NPM' package for creating a command line interface from Node.js?  
     A. Inquirer - key  
@@ -176,14 +176,14 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
 
 25. What best describes the highest level issue with the following code block?      
     ```js
-    var x = 5;
-    y  = 7;
+    var x = 5;  
+    y  = 7;  
 
     function multiply (numOne, numTwo) {
         return numOne * numTwo
-    }
+    }  
 
-    multiply(x, y)
+    multiply(x, y);
     ```  
     A. There is no semi-colon on line 182 or 185.  
     B. The variable `y` is declared on the global scope. - key  
