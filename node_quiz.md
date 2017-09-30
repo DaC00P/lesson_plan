@@ -1,8 +1,8 @@
 ### Node.js Quiz
 Welcome to your Node.js weekly assessment! Please select the best answer for each question. There is only **one** correct answer for each question. Below the numbered questions are five fill-in-the-code style questions. Please answer those to the best of your ability in Node (back-end) JavaScript. Please do not use **any** 3rd party JavaScript packages. If any built-in method is disallowed for a specific problem, the question will state so. `i.e. Please do not use `.sort` on this question.`
 
-1. What is an example of a Web Client?
-    A. A Browser - key
+1. What is an example of a Web Client?  
+    A. A Browser - key  
     B. A Server  
     C. Node.js  
     D. The D.O.M.  
@@ -30,11 +30,11 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     var a = 5;
     var b = 5;
     console.log(a === b)
-    ```
-    A. If `a` and `b` are the same value
+    ```  
+    A. If `a` and `b` are the same value  
     B. Whether the type and value of `a` and `b` are equal - key  
     C. If `a` has the same object ID as `b`  
-    D. Whether the object IDs of both objects are the same
+    D. Whether the object IDs of both objects are the same  
 
 6. What will `parseInt('  5  ')` return?  
     A. The string of '  5  '  
@@ -48,11 +48,11 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. To export the variable myVar to the file server.js.  
     D. To make the variable myVar available for `require` in other JavaScript files. - key  
 
-##8. What is the purpose of creating modules of different JavaScript code?  
-    A. To encapsulate our code into different files for best practices  
-    B. To be able to access JavaScript in one file from another file  
-    C. To help enable the NPM/package ecosystem  
-    D. All of the Above - key  
+8. What is one of the purposes of creating modules of different JavaScript code?  
+    A. To minify our code for best practices  
+    B. To access JavaScript in the file explorer  
+    C. So we can send our code via email  
+    D. So we can access our code in different `.js` files - key   
 
 9. Examine the following code block. What will be logged to the console?           
     ```js
@@ -151,10 +151,10 @@ Welcome to your Node.js weekly assessment! Please select the best answer for eac
     C. All of the dependencies of your code.  
     D. The code you get when you run `git pull origin master`.  
 
-22. What kind of object is returned by most APIs, and in particular the OMDB API?
+22. What kind of object is returned by most APIs, and in particular the OMDB API?  
     A. String  
-    B. JSON - key    
-    C. Array
+    B. JSON - key  
+    C. Array  
     D. Response  
 
 23. What is a popular 'NPM' package for creating a command line interface from Node.js?  
